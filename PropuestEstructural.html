@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <title>
+      BuildingSceneLayer with Slice widget | Sample | ArcGIS API for JavaScript
+      4.18
+    </title>
+
+    <style>
+      html,
+      body,
+      #viewDiv {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+      }
+
+      #menu {
+        padding: 0.8em;
+        max-width: 250px;
+      }
+
+      #sliceContainer {
+        width: inherit;
+      }
+
+      #sliceOptions {
+        margin: 0 15px;
+      }
+
+      #sliceOptions > button {
+        margin-bottom: 15px;
+      }
+
+      #sliceContainer {
+        max-width: 228px;
+      }
+    </style>
+
+    <link
+      href="https://js.arcgis.com/4.18/esri/themes/light/main.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://js.arcgis.com/4.18/"></script>
+   <script src="docs/api.js"></script>
+  </head>
+
+  <body>
+    <div id="viewDiv">
+      <div id="menu" class="esri-widget">
+        <input type="checkbox" id="color" /><label for="color">
+          Display all doors with a red color</label
+        >
+        <div id="sliceContainer"></div>
+        <div id="sliceOptions">
+          <button
+            class="esri-button esri-button--secondary"
+            id="resetPlaneBtn"
+            type="button"
+            title="Reset slice plane"
+          >
+            Reset slice plane
+          </button>
+          <button
+            class="esri-button esri-button--secondary"
+            id="clearPlaneBtn"
+            type="button"
+            title="Clear slice plane"
+          >
+            Clear slice
+          </button>
+          <input type="checkbox" id="tiltEnabled" checked /><label
+            for="tiltEnabled"
+            >Allow tilt on slice plane</label
+          >
+        </div>
+      </div>
+    </div>
+     <div id="topbar">
+      <button
+        class="action-button esri-icon-measure-line"
+        id="distanceButton"
+        type="button"
+        title="Measure distance between two points"
+      ></button>
+      <button
+        class="action-button esri-icon-measure-area"
+        id="areaButton"
+        type="button"
+        title="Measure area"
+      ></button>
+    </div>
+  </body>
+</html>
